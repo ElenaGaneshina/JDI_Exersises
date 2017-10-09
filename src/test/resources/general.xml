@@ -3,9 +3,9 @@
 <suite name="Test suite" parallel="methods" thread-count="1">
     <test name="Tests" preserve-order="true">
         <classes>
-            <class name="org.mytests.tests.example.SimpleExampleTest"/>
-            <class name="org.mytests.tests.FrameTest"/>
-            <class name="org.mytests.tests.SmokeTest"/>
+            <class name="epam.testAuto.DifferentElementsPageTest"/>
+            <class name="epam.testAuto.DatesPageTests"/>
+            <class name="epam.testAuto.ElementsTests"/>
         </classes>
     </test>
 </suite>
