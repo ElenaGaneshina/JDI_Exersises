@@ -35,14 +35,14 @@ public class DatesForm extends Form<DatesPageEntity>{
     //SLIDER MOVING IMPLEMENTATION
 
     @FindBy(css = ".uui-slider.blue a:nth-child(1)")
-    private Link leftSliderHandle;
+    private Label leftSliderHandle;
 
     @FindBy(css = ".uui-slider.blue a:nth-child(3)")
-    private Link rightSliderHandle;
+    private Label rightSliderHandle;
 
     //Width of slider
     @FindBy(css = ".uui-slider.blue")
-    private WebElement slider;
+    public WebElement slider;
 
     //Numbers on left and right sliders
     @FindBy(css = ".uui-slider.blue a:nth-child(1)>span")
@@ -51,7 +51,7 @@ public class DatesForm extends Form<DatesPageEntity>{
     @FindBy(css = ".uui-slider.blue a:nth-child(3)>span")
     private Label rightSliderValue;
 
-    public void moveSlider(int leftPosition, int rightPosition, char side) {
+    public void moveSlider(int leftPosition, int rightPosition, String side) {
 
         //JS for scroll web page down
         JavascriptExecutor js;
@@ -60,7 +60,7 @@ public class DatesForm extends Form<DatesPageEntity>{
 
 
         int widthSlider = slider.getSize().getWidth();
-        if (side == 'R') {
+        if (side.equals("R")) {
             rightSliderHandle.dragAndDropBy((rightPosition - 1) * widthSlider / 100, 0);
             leftSliderHandle.dragAndDropBy((leftPosition - 1) * widthSlider / 100, 0);
 

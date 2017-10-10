@@ -17,19 +17,19 @@ public class RangeSliderTest extends ExtensionForTests {
         header.serviceMenuElements.select(DATES.serviceItem.toUpperCase());
 
         //move to the most left and right position (0,100)%
-        datesPage.datesForm.moveSlider(-20,0,'L');
+        datesPage.datesForm.moveSlider(-20,0,"L");
         datesPage.datesForm.checkValuesOnSlider(0,100);
 
         //move all to the most left position(0,0)%
-        datesPage.datesForm.moveSlider(0,-100,'L');
+        datesPage.datesForm.moveSlider(0,-100,"L");
         datesPage.datesForm.checkValuesOnSlider(0,0);
 
         //move all to the most right position (100,100)%
-        datesPage.datesForm.moveSlider(100,100,'R');
+        datesPage.datesForm.moveSlider(100,100,"R");
         datesPage.datesForm.checkValuesOnSlider(100,100);
 
         //move to (30,70)%
-        datesPage.datesForm.moveSlider(-70,-30,'L');
+        datesPage.datesForm.moveSlider(-70,-30,"L");
         datesPage.datesForm.checkValuesOnSlider(30,70);
 
     }

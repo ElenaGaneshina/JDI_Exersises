@@ -89,14 +89,7 @@ public class ElementsTests extends ExtensionForTests {
         homePage.benefitIcons.get(3).isDisplayed();
     }
 
-    //9.File input - don't understand how to use
-    @Test
-    public void inputFileTest() {
-        //JDIEpamSite.datesPage.open();
-        //JDIEpamSite.datesPage.imageInput
-    }
-
-    //10.DropDown
+    //9.DropDown
     @Test
     public void dropDownTest() {
         differentElementPage.open();
@@ -104,7 +97,7 @@ public class ElementsTests extends ExtensionForTests {
         Assert.areEquals(differentElementPage.colors.getText(), GREEN.color);
     }
 
-    //11.Checklist - Why result is True == is False
+    //10.Checklist - Why result is True == is False
     @Test
     public void checkListTest() {
         metalAndColorPage.open();
@@ -112,15 +105,7 @@ public class ElementsTests extends ExtensionForTests {
         Assert.isFalse(metalAndColorPage.elementsCheckBoxes.isSelected(EARTH.element));
     }
 
-    //12.Combobox - How to work with Combobox?
-    @Test
-    public void comboBoxTest() {
-//JDIEpamSite.metalAndColorPage.open();
-//JDIEpamSite.metalAndColorPage.vegetablesComboBox.select(Vegetables.CUCUMBER.vegetables);
-
-    }
-
-    //13.DropList
+    //11.DropList
     @Test
     public void dropListTest() {
         metalAndColorPage.open();
@@ -128,7 +113,7 @@ public class ElementsTests extends ExtensionForTests {
         Assert.areEquals(metalAndColorPage.colorsDropdown.getText(), RED.color);
     }
 
-    //14.List<Element>
+    //12.List<Element>
     @Test
     public void listElementTest() {
         homePage.open();
@@ -137,7 +122,7 @@ public class ElementsTests extends ExtensionForTests {
 
     }
 
-    //15.Elements
+    //13.Elements
     @Test
     public void elementsTest() {
         differentElementPage.open();
@@ -145,20 +130,14 @@ public class ElementsTests extends ExtensionForTests {
         Assert.contains(actionLog.logActions.getText(0), EARTH_TRUE.log);
     }
 
-    //16.Table
-    @Test
-    public void tableTest() {
-
-    }
-
-    //17.Menu
+    //14.Menu
     @Test
     public void menuTest() {
         leftSiteSection.leftSectionItems.clickOn(CONTACT_FORM.menuItem);
         contactPage.checkOpened();
     }
 
-    //18.RadioButtons - How to check that it's selected-?Override getSelectedAction or place locator to <select> tag
+    //15.RadioButtons - How to check that it's selected-?Override getSelectedAction or place locator to <select> tag
     @Test
     public void radioButtonsTest() {
         metalAndColorPage.open();

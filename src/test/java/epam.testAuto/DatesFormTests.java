@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import static epam.testAuto.enums.DatesFormEnum.*;
 import static epam.testAuto.page_objects.JDIEpamSite.datesPage;
 
-public class DatesPageTests extends ExtensionForTests {
+public class DatesFormTests extends ExtensionForTests {
 
     @BeforeMethod
     public void beforeTest() {
@@ -18,9 +18,7 @@ public class DatesPageTests extends ExtensionForTests {
     //To fill all fields ans Submit
     @Test
     public void allFieldsSubmitTest() {
-        DatesPageEntity entity = new DatesPageEntity(NAME.datesFormValue, LAST_NAME.datesFormValue,
-                DESCRIPTION.datesFormValue, PERIOD.datesFormValue, TIME.datesFormValue,
-                RANGE1_LEFT.datesFormValue, RANGE1_RIGHT.datesFormValue);
+        DatesPageEntity entity = new DatesPageEntity();
         datesPage.datesForm.submit(entity);
         datesPage.resultLog.checkAllFormFieldsInResult(entity);
     }
@@ -36,16 +34,17 @@ public class DatesPageTests extends ExtensionForTests {
     @Test
     public void notMandatorySubmit() {
         DatesPageEntity entity = new DatesPageEntity(DESCRIPTION.datesFormValue,  PERIOD.datesFormValue,
-                TIME.datesFormValue);
+                TIME.datesFormValue, RANGE2_LEFT.datesFormValue, RANGE2_RIGHT.datesFormValue, MOVE_TO_RANGE2.datesFormValue);
         datesPage.datesForm.submit(entity);
         datesPage.resultLog.checkNotMandatoryFieldsInResult(entity);
     }
 
-    //Don't fiel the fields and Submit
+    //Don't fill the fields and Submit
     @Test
     public void noFieldsSubmitTest() {
-        datesPage.datesForm.submit(new DatesPageEntity());
-        datesPage.resultLog.checkNoFieldsInResult(new DatesPageEntity());
+        DatesPageEntity entity = new DatesPageEntity(null, null, null, null, null, null, null, null, null, null);
+        datesPage.datesForm.submit(entity);
+        datesPage.resultLog.checkNoFieldsInResult(entity);
     }
 
 }
