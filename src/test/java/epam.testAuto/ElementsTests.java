@@ -7,10 +7,10 @@ import org.testng.annotations.Test;
 
 import static epam.testAuto.enums.Colors.GREEN;
 import static epam.testAuto.enums.Colors.RED;
-import static epam.testAuto.enums.DatesFormEnum.NAME;
-import static epam.testAuto.enums.DatesFormEnum.PERIOD;
 import static epam.testAuto.enums.Elements.EARTH;
 import static epam.testAuto.enums.Elements.WIND;
+import static epam.testAuto.enums.FormEnum.NAME;
+import static epam.testAuto.enums.FormEnum.PERIOD;
 import static epam.testAuto.enums.Log.BUTTON_CLICKED;
 import static epam.testAuto.enums.Log.EARTH_TRUE;
 import static epam.testAuto.enums.MainMenu.CONTACT_FORM;
@@ -37,21 +37,21 @@ public class ElementsTests extends ExtensionForTests {
     @Test
     public void textFieldTest() {
         datesPage.open();
-        datesPage.name.sendKeys(NAME.datesFormValue);
-        Assert.areEquals(datesPage.name.getText(), NAME.datesFormValue);
+        datesPage.name.sendKeys(NAME.formValue);
+        Assert.areEquals(datesPage.name.getText(), NAME.formValue);
     }
 
     //3. Label
     @Test
     public void lableTest() {
         homePage.open();
-        Assert.areEquals(homePage.mainTitle.getText(), MAIN_TITLE.text);
+        Assert.areEquals(homePage.mainTitle.getText(), MAIN_TITLE.text.toUpperCase());
     }
 
     //4. Menu
     @Test
     public void openContactFormTest() {
-        header.headerItems.clickOn(CONTACT_FORM.menuItem.toUpperCase());
+        header.headerMenu.clickOn(CONTACT_FORM.menuItem.toUpperCase());
         contactPage.checkOpened();
     }
 
@@ -74,9 +74,9 @@ public class ElementsTests extends ExtensionForTests {
     @Test
     public void testDataPickerAndFileInput() {
         datesPage.open();
-        datesPage.period.sendKeys(PERIOD.datesFormValue);
+        datesPage.period.sendKeys(PERIOD.formValue);
         datesPage.lastName.clickCenter();
-        Assert.areEquals(datesPage.period.getText(), PERIOD.datesFormValue);
+        Assert.areEquals(datesPage.period.getText(), PERIOD.formValue);
     }
 
     //8. Image(How to do cycle for Image?)
@@ -144,5 +144,13 @@ public class ElementsTests extends ExtensionForTests {
         metalAndColorPage.summaryRadioButtonsEven.select(EIGHT);
         Assert.contains(actionLog.logActions.getText(0), Log.EIGHT.log);
     }
+
+//    @Test
+//    public void comboBoxTest() {
+//        metalAndColorPage.open();
+//        metalAndColorPage.vegetablesComboBox.select(Vegetables.CUCUMBER.vegetables);
+//    }
+
+
 }
 

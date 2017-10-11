@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="WINDOWS-1251"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Test suite" parallel="methods" thread-count="1">
-    <test name="Tests" preserve-order="true">
-        <classes>
-            <class name="epam.testAuto.DifferentElementsPageTest"/>
-            <class name="epam.testAuto.DatesPageTests"/>
-            <class name="epam.testAuto.ElementsTests"/>
-        </classes>
-    </test>
+        <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test suite" thread-count="1">
+<test name="Tests" preserve-order="true">
+    <classes>
+        <class name="epam.testAuto.ContactFormTests"/>
+        <class name="epam.testAuto.DatesFormTests"/>
+        <class name="epam.testAuto.DifferentElementsPageTest"/>
+        <class name="epam.testAuto.ElementsTests"/>
+        <class name="epam.testAuto.HomePageFourTextsTest"/>
+        <class name="epam.testAuto.RangeSliderTest"/>
+    </classes>
+</test>
 </suite>

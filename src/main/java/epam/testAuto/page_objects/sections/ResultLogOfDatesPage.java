@@ -13,7 +13,7 @@ import static com.epam.web.matcher.testng.Assert.isTrue;
 import static com.epam.web.matcher.testng.ScreenAssert.assertEquals;
 import static epam.testAuto.page_objects.JDIEpamSite.datesPage;
 
-public class ResultLog extends Section{
+public class ResultLogOfDatesPage extends Section{
     //Parts of section
     private TextField name;
     private TextField lastName;

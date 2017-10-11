@@ -13,7 +13,7 @@ public class RangeSliderTest extends ExtensionForTests {
     @Test
     public void checkSlider(){
     header.checkDisplayedUserName();
-        header.headerItems.select(SERVICE);
+        header.headerMenu.select(SERVICE);
         header.serviceMenuElements.select(DATES.serviceItem.toUpperCase());
 
         //move to the most left and right position (0,100)%

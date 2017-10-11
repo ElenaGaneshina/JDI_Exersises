@@ -1,7 +1,7 @@
 package epam.testAuto.enums;
 
 public enum Vegetables {
-    CUCUMBER("Cucumbe"),
+    CUCUMBER("Cucumber"),
     TOMATO("Tomato"),
     SALAD("Salad"),
     ONION("Onion");

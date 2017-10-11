@@ -4,7 +4,7 @@ import com.epam.jdi.uitests.web.selenium.elements.common.*;
 import com.epam.jdi.uitests.web.selenium.elements.composite.WebPage;
 import org.openqa.selenium.support.FindBy;
 import epam.testAuto.page_objects.sections.DatesForm;
-import epam.testAuto.page_objects.sections.ResultLog;
+import epam.testAuto.page_objects.sections.ResultLogOfDatesPage;
 
 public class DatesPage extends WebPage {
     //Section
@@ -12,7 +12,7 @@ public class DatesPage extends WebPage {
     public DatesForm datesForm;
 
     @FindBy(css =".results")
-    public ResultLog resultLog;
+    public ResultLogOfDatesPage resultLog;
 
     //Maybe not need
 

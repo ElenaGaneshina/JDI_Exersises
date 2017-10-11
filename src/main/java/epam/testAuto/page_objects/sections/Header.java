@@ -21,8 +21,8 @@ public class Header extends Section {
     public Login loginForm;
 
     //Header Items
-    @FindBy(css = ".uui-navigation.nav.navbar-nav.m-l8>li>a")
-    public Menu<MainMenu> headerItems;
+    @FindBy(css = ".uui-navigation.nav.navbar-nav.m-l8")
+    public Menu<MainMenu> headerMenu;
 
     //Service menu
     @FindBy(css = "ul[class=dropdown-menu]>li")

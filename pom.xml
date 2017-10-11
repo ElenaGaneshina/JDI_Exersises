@@ -50,12 +50,13 @@
                 <version>2.19.1</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/general.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/${suiteXmlFile}</suiteXmlFile>
                     </suiteXmlFiles>
                     <testFailureIgnore>true</testFailureIgnore>
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
+                    <argLine>-Dfile.encoding=UTF-8</argLine>
                 </configuration>
                 <dependencies>
                     <dependency>

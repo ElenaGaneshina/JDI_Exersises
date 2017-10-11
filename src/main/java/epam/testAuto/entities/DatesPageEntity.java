@@ -1,22 +1,22 @@
 package epam.testAuto.entities;
 
 import com.epam.commons.DataClass;
-import epam.testAuto.enums.DatesFormEnum;
+import epam.testAuto.enums.FormEnum;
 import epam.testAuto.page_objects.JDIEpamSite;
 
 import static epam.testAuto.page_objects.JDIEpamSite.datesPage;
 
 public class DatesPageEntity extends DataClass {
-    public String name = DatesFormEnum.NAME.datesFormValue;
-    public String lastName = DatesFormEnum.LAST_NAME.datesFormValue;
-    public String description = DatesFormEnum.DESCRIPTION.datesFormValue;
-    public String period = DatesFormEnum.PERIOD.datesFormValue;
-    public String time = DatesFormEnum.TIME.datesFormValue;
-    public String leftRange1 = DatesFormEnum.RANGE1_LEFT.datesFormValue;
-    public String rightRange1 = DatesFormEnum.RANGE1_RIGHT.datesFormValue;
-    public String leftRange2 = DatesFormEnum.RANGE2_LEFT.datesFormValue;
-    public String rightRange2 = DatesFormEnum.RANGE2_RIGHT.datesFormValue;
-    public String moveToRange2 = DatesFormEnum.MOVE_TO_RANGE2.datesFormValue;
+    public String name = FormEnum.NAME.formValue;
+    public String lastName = FormEnum.LAST_NAME.formValue;
+    public String description = FormEnum.DESCRIPTION.formValue;
+    public String period = FormEnum.PERIOD.formValue;
+    public String time = FormEnum.TIME.formValue;
+    public String leftRange1 = FormEnum.RANGE1_LEFT.formValue;
+    public String rightRange1 = FormEnum.RANGE1_RIGHT.formValue;
+    public String leftRange2 = FormEnum.RANGE2_LEFT.formValue;
+    public String rightRange2 = FormEnum.RANGE2_RIGHT.formValue;
+    public String moveToRange2 = FormEnum.MOVE_TO_RANGE2.formValue;
 
 
     //for mandatory fields

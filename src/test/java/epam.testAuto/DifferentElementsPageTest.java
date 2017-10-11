@@ -30,7 +30,7 @@ public class DifferentElementsPageTest extends ExtensionForTests {
         leftSiteSection.checkLeftServiceMenu();
 
         //5.Open through the header menu Service -> Different Elements Page
-        header.headerItems.select(SERVICE);
+        header.headerMenu.select(SERVICE);
         header.checkHeaderServiceMenu();
         header.serviceMenuElements.select(DIFFERENT_ELEMENTS.serviceItem.toUpperCase());
 

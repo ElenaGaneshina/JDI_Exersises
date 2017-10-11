@@ -1,0 +1,7 @@
+<suite name="Contact Form Test suite" thread-count="1">
+    <test name="Contact Form  Tests" preserve-order="true">
+        <classes>
+            <class name="epam.testAuto.ContactFormTests"/>
+        </classes>
+    </test>
+</suite>

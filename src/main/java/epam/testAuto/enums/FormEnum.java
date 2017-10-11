@@ -1,7 +1,7 @@
 package epam.testAuto.enums;
 
 //Enum for Dates Page Test = value for Dates Form
-public enum DatesFormEnum {
+public enum FormEnum {
     NAME("Elena"),
     LAST_NAME("Ganeshina"),
     DESCRIPTION("Test Description"),
@@ -13,10 +13,10 @@ public enum DatesFormEnum {
     RANGE2_RIGHT("0"),
     MOVE_TO_RANGE2("L");
 
-    public String datesFormValue;
+    public String formValue;
 
-    DatesFormEnum (String value){
-        this.datesFormValue=value;
+    FormEnum(String value){
+        this.formValue = value;
     }
 
 }
