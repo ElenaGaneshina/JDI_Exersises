@@ -152,12 +152,12 @@ public class ElementsTests extends ExtensionForTests {
         metalAndColorPage.vegetablesCheckList.select(CUCUMBER.vegetables);
     }
 
-    //17. Why Row and Columns are changed? I guess column = 3, row = 6
+    //17. Table
     @Test
     public void tableTest(){
         supportPage.open();
-        Assert.areEquals(supportPage.supportTable.columns().count(), 6);
-        Assert.areEquals(supportPage.supportTable.rows().count(), 3);
+        Assert.areEquals(supportPage.supportTable.columns().count(), 3);
+        Assert.areEquals(supportPage.supportTable.rows().count(), 6);
     }
 }
 

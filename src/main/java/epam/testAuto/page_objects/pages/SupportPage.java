@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class SupportPage extends WebPage {
     @JTable(
-            size = "6x3",
+            size = "3x6",
             root = @FindBy(tagName = "tbody"),
             row = @FindBy(xpath = ".//tr[%s]"),
             column = @FindBy(xpath= ".//td[%s]"),
