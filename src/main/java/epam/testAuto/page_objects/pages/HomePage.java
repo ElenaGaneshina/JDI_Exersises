@@ -3,7 +3,7 @@ package epam.testAuto.page_objects.pages;
 import com.epam.jdi.uitests.web.selenium.elements.common.Image;
 import com.epam.jdi.uitests.web.selenium.elements.common.Label;
 import com.epam.jdi.uitests.web.selenium.elements.common.Text;
-import com.epam.jdi.uitests.web.selenium.elements.complex.Elements;
+import com.epam.jdi.uitests.web.selenium.elements.complex.TextList;
 import com.epam.jdi.uitests.web.selenium.elements.composite.WebPage;
 import com.epam.web.matcher.testng.Assert;
 import org.openqa.selenium.support.FindBy;
@@ -21,13 +21,13 @@ public class HomePage extends WebPage {
     public List<Image> benefitIcons;
 
     @FindBy(css = ".benefit-txt")
-    public Elements<Text> benefitTexts;
+    public TextList benefitTexts;
 
     //Methods
     public void checkContainsElements(){
         mainTitle.isDisplayed();
         mainText.isDisplayed();
         Assert.areEquals(benefitIcons.size(), 4);
-        Assert.areEquals(benefitTexts.size(),4);
+        Assert.areEquals(benefitTexts.getTextList().size(),4);
     }
 }

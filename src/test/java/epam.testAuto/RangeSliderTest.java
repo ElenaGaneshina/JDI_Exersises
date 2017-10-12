@@ -12,9 +12,10 @@ public class RangeSliderTest extends ExtensionForTests {
 
     @Test
     public void checkSlider(){
-    header.checkDisplayedUserName();
+        header.checkDisplayedUserName();
         header.headerMenu.select(SERVICE);
         header.serviceMenuElements.select(DATES.serviceItem.toUpperCase());
+        datesPage.shouldBeOpened();
 
         //move to the most left and right position (0,100)%
         datesPage.datesForm.moveSlider(-20,0,"L");

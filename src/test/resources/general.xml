@@ -8,6 +8,7 @@
         <class name="epam.testAuto.DifferentElementsPageTest"/>
         <class name="epam.testAuto.ElementsTests"/>
         <class name="epam.testAuto.HomePageFourTextsTest"/>
+        <class name="epam.testAuto.MetalsAndColorsPageTests"/>
         <class name="epam.testAuto.RangeSliderTest"/>
     </classes>
 </test>

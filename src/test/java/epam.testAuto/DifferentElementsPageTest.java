@@ -35,8 +35,8 @@ public class DifferentElementsPageTest extends ExtensionForTests {
         header.serviceMenuElements.select(DIFFERENT_ELEMENTS.serviceItem.toUpperCase());
 
         //6.Select checkboxes
-        differentElementPage.elementsCheckBoxes.get(WIND.element).click();
-        differentElementPage.elementsCheckBoxes.get(WATER.element).click();
+        differentElementPage.elementsCheckBoxes.check(WIND.element);
+        differentElementPage.elementsCheckBoxes.check(WATER.element);
 
         //7.Select radio
         differentElementPage.metalRadioButtons.select(SELEN.metal);
@@ -51,8 +51,8 @@ public class DifferentElementsPageTest extends ExtensionForTests {
         differentElementPage.checkLog(YELLOW_SET.log);
 
         //10.Unselect checkboxes
-        differentElementPage.elementsCheckBoxes.get(WATER.element).click();
-        differentElementPage.elementsCheckBoxes.get(WIND.element).click();
+        differentElementPage.elementsCheckBoxes.check(WATER.element);
+        differentElementPage.elementsCheckBoxes.check(WIND.element);
 
         //11.Check in logs section unselected values and status (true|false)
         differentElementPage.checkLog(WIND_FALSE.log);

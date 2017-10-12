@@ -1,5 +1,6 @@
 package epam.testAuto.page_objects;
 
+import com.epam.jdi.uitests.web.selenium.elements.complex.TextList;
 import com.epam.jdi.uitests.web.selenium.elements.composite.WebSite;
 import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.JPage;
 import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.JSite;
@@ -47,8 +48,11 @@ public class JDIEpamSite extends WebSite {
     @FindBy(css = "#mCSB_1")
     public static LeftSiteSection leftSiteSection;
 
-    @FindBy(css="#mCSB_2")
+    @FindBy(css=".logs>li")
     public static ActionLog actionLog;
+
+    @FindBy(css=".results")
+    public static TextList<Enum> resultLog;
 
 
 

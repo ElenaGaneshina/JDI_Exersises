@@ -8,11 +8,10 @@ import static epam.testAuto.page_objects.JDIEpamSite.homePage;
 import static org.testng.Assert.assertEquals;
 
 public class HomePageFourTextsTest extends ExtensionForTests{
-
     @Test(dataProvider = "fourTexts", dataProviderClass = FourTextsProvider.class)
     public void fourTextsTest(int num, String text) {
-        //Check Text under pictures
         homePage.open();
-        assertEquals(homePage.benefitTexts.get(num).getText(), text);
+        //Check Text under pictures
+        assertEquals(homePage.benefitTexts.getTextList().get(num), text);
     }
 }

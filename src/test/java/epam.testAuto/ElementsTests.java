@@ -17,6 +17,7 @@ import static epam.testAuto.enums.MainMenu.CONTACT_FORM;
 import static epam.testAuto.enums.Numbers.EIGHT;
 import static epam.testAuto.enums.Texts.MAIN_TEXT;
 import static epam.testAuto.enums.Texts.MAIN_TITLE;
+import static epam.testAuto.enums.Vegetables.CUCUMBER;
 import static epam.testAuto.page_objects.JDIEpamSite.*;
 
 public class ElementsTests extends ExtensionForTests {
@@ -66,8 +67,7 @@ public class ElementsTests extends ExtensionForTests {
     @Test
     public void testCheckBox() {
         differentElementPage.open();
-        differentElementPage.elementsCheckBoxes.get(WIND.element).click();
-        Assert.isFalse(differentElementPage.elementsCheckBoxes.get(WIND.element).isChecked());
+        differentElementPage.elementsCheckBoxes.check(WIND);
     }
 
     //7. DataPicker
@@ -144,13 +144,20 @@ public class ElementsTests extends ExtensionForTests {
         metalAndColorPage.summaryRadioButtonsEven.select(EIGHT);
         Assert.contains(actionLog.logActions.getText(0), Log.EIGHT.log);
     }
+    //16.
+    @Test
+    public void checkListDropDownTest() {
+        metalAndColorPage.open();
+        metalAndColorPage.vegetablesLable.click();
+        metalAndColorPage.vegetablesCheckList.select(CUCUMBER.vegetables);
+    }
 
-//    @Test
-//    public void comboBoxTest() {
-//        metalAndColorPage.open();
-//        metalAndColorPage.vegetablesComboBox.select(Vegetables.CUCUMBER.vegetables);
-//    }
-
-
+    //17. Why Row and Columns are changed? I guess column = 3, row = 6
+    @Test
+    public void tableTest(){
+        supportPage.open();
+        Assert.areEquals(supportPage.supportTable.columns().count(), 6);
+        Assert.areEquals(supportPage.supportTable.rows().count(), 3);
+    }
 }
 
